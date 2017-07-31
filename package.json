@@ -1,0 +1,22 @@
+{
+  "name": "node-typescript",
+  "version": "1.0.0",
+  "description": "Node.js typescript compiler",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "dev": "concurrently \"tsc -w\" \"nodemon ./build/app.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node build/app.js"
+  },
+  "keywords": [],
+  "author": "Fazt",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.17",
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.4.2"
+  }
+}
